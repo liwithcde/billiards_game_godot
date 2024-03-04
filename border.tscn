@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd1rn4et2jaol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw8xh"]
+size = Vector2(339, 20)
+
+[node name="border" type="StaticBody2D"]
+position = Vector2(402, 656)
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 340.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(170, 10)
+shape = SubResource("RectangleShape2D_gw8xh")

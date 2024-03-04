@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bphhvank2lxrl"]
+
+[ext_resource type="Texture2D" uid="uid://byxcoitrngtr8" path="res://pngwing.com.png" id="1_d40eb"]
+[ext_resource type="Script" path="res://stick.gd" id="1_pr4jv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t6puf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ic4b"]
+radius = 3.0
+height = 38.8651
+
+[node name="stick" type="StaticBody2D"]
+position = Vector2(966, 209)
+rotation = 0.120428
+physics_material_override = SubResource("PhysicsMaterial_t6puf")
+script = ExtResource("1_pr4jv")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-345, -1.99999)
+rotation = 2.56912
+scale = Vector2(0.193, 0.192)
+texture = ExtResource("1_d40eb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_2ic4b")
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

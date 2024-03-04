@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://46jb4ewbp6dk"]
+
+[ext_resource type="Texture2D" uid="uid://ecfkdoxf1l7w" path="res://American-style_pool_table_diagram_(empty).png" id="1_7xmyd"]
+[ext_resource type="Script" path="res://main.gd" id="1_pn1wl"]
+[ext_resource type="PackedScene" uid="uid://dd1rn4et2jaol" path="res://border.tscn" id="1_wdge1"]
+[ext_resource type="PackedScene" uid="uid://cpl6gsf654rmu" path="res://ball.tscn" id="2_k0013"]
+[ext_resource type="PackedScene" uid="uid://bphhvank2lxrl" path="res://stick.tscn" id="2_vv1nj"]
+[ext_resource type="PackedScene" uid="uid://bgl2jfrfjxs7k" path="res://remove.tscn" id="5_g18q0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3vlma"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvinr"]
+font_size = 10
+shadow_size = 2
+
+[node name="Main" type="Node"]
+script = ExtResource("1_pn1wl")
+
+[node name="American-stylePoolTableDiagram(empty)" type="Sprite2D" parent="."]
+position = Vector2(652, 339)
+scale = Vector2(0.821654, 0.769578)
+texture = ExtResource("1_7xmyd")
+
+[node name="border" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(114, 613)
+scale = Vector2(1.48457, 2.66835)
+
+[node name="border2" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(694, 624)
+scale = Vector2(1.49866, 2.51679)
+
+[node name="border3" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(66, 103)
+rotation = 1.5708
+scale = Vector2(1.37712, 2.98454)
+
+[node name="border4" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(1292, 101)
+rotation = 1.5708
+scale = Vector2(1.41461, 2.9494)
+
+[node name="border5" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(613, 63)
+rotation = 3.14159
+scale = Vector2(1.47541, 2.76456)
+
+[node name="border6" parent="." instance=ExtResource("1_wdge1")]
+position = Vector2(682, 11)
+scale = Vector2(1.51669, 2.92003)
+
+[node name="ball" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(834, 461)
+
+[node name="ball2" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(638, 248)
+
+[node name="ball3" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(327, 201)
+scale = Vector2(1.02093, 0.688493)
+
+[node name="ball4" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(573, 445)
+physics_material_override = SubResource("PhysicsMaterial_3vlma")
+
+[node name="ball5" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(480, 413)
+
+[node name="ball6" parent="." instance=ExtResource("2_k0013")]
+position = Vector2(929, 251)
+
+[node name="stick" parent="." instance=ExtResource("2_vv1nj")]
+position = Vector2(1714, 1058)
+scale = Vector2(2, 2)
+
+[node name="remove2" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(29, 19)
+scale = Vector2(1.32, 1.32)
+
+[node name="remove3" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(647, -17)
+scale = Vector2(1.32, 1.32)
+
+[node name="remove4" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(1277, 19)
+scale = Vector2(1.32, 1.32)
+
+[node name="remove5" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(1280, 662)
+scale = Vector2(1.32, 1.32)
+
+[node name="remove6" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(652, 693)
+scale = Vector2(1.32, 1.32)
+
+[node name="remove7" parent="." instance=ExtResource("5_g18q0")]
+position = Vector2(23, 656)
+scale = Vector2(1.32, 1.32)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 966.0
+offset_top = 137.0
+offset_right = 1006.0
+offset_bottom = 160.0
+scale = Vector2(4.72, 5.24)
+text = "Hello
+"
+label_settings = SubResource("LabelSettings_nvinr")
